@@ -57,25 +57,15 @@ public interface calculatorListener extends ParseTreeListener {
 	 */
 	void exitAtom(calculatorParser.AtomContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link calculatorParser#scientific}.
+	 * Enter a parse tree produced by {@link calculatorParser#number}.
 	 * @param ctx the parse tree
 	 */
-	void enterScientific(calculatorParser.ScientificContext ctx);
+	void enterNumber(calculatorParser.NumberContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link calculatorParser#scientific}.
+	 * Exit a parse tree produced by {@link calculatorParser#number}.
 	 * @param ctx the parse tree
 	 */
-	void exitScientific(calculatorParser.ScientificContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link calculatorParser#constant}.
-	 * @param ctx the parse tree
-	 */
-	void enterConstant(calculatorParser.ConstantContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link calculatorParser#constant}.
-	 * @param ctx the parse tree
-	 */
-	void exitConstant(calculatorParser.ConstantContext ctx);
+	void exitNumber(calculatorParser.NumberContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link calculatorParser#variable}.
 	 * @param ctx the parse tree
@@ -86,24 +76,4 @@ public interface calculatorListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitVariable(calculatorParser.VariableContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link calculatorParser#func_}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunc_(calculatorParser.Func_Context ctx);
-	/**
-	 * Exit a parse tree produced by {@link calculatorParser#func_}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunc_(calculatorParser.Func_Context ctx);
-	/**
-	 * Enter a parse tree produced by {@link calculatorParser#funcname}.
-	 * @param ctx the parse tree
-	 */
-	void enterFuncname(calculatorParser.FuncnameContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link calculatorParser#funcname}.
-	 * @param ctx the parse tree
-	 */
-	void exitFuncname(calculatorParser.FuncnameContext ctx);
 }

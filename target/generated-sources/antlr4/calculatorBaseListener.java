@@ -75,25 +75,13 @@ public class calculatorBaseListener implements calculatorListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterScientific(calculatorParser.ScientificContext ctx) { }
+	@Override public void enterNumber(calculatorParser.NumberContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitScientific(calculatorParser.ScientificContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterConstant(calculatorParser.ConstantContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitConstant(calculatorParser.ConstantContext ctx) { }
+	@Override public void exitNumber(calculatorParser.NumberContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -106,30 +94,6 @@ public class calculatorBaseListener implements calculatorListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitVariable(calculatorParser.VariableContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterFunc_(calculatorParser.Func_Context ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitFunc_(calculatorParser.Func_Context ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterFuncname(calculatorParser.FuncnameContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitFuncname(calculatorParser.FuncnameContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

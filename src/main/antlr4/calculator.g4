@@ -15,7 +15,6 @@ powExpression
 signedAtom
    : PLUS signedAtom
    | MINUS signedAtom
-   | func_
    | atom
    ;
 
@@ -33,79 +32,18 @@ variable
    : VARIABLE
    ;
 
-func_
-   : funcname LPAREN expression (COMMA expression)* RPAREN
-   ;
-
-funcname
-   : COS
-   | TAN
-   | SIN
-   | SQRT
-   ;
-
-COS
-   : 'cos'
-   ;
-
-SIN
-   : 'sin'
-   ;
-
-TAN
-   : 'tan'
-   ;
-
-SQRT
-   : 'sqrt'
-   ;
-
-LPAREN
-   : '('
-   ;
-
-RPAREN
-   : ')'
-   ;
-
-PLUS
-   : '+'
-   ;
-
-MINUS
-   : '-'
-   ;
-
-TIMES
-   : '*'
-   ;
-
-DIV
-   : '/'
-   ;
-
-COMMA
-   : ','
-   ;
-
-POINT
-   : '.'
-   ;
-
-POW
-   : '^'
-   ;
+LPAREN : '(' ;
+RPAREN : ')' ;
+PLUS : '+' ;
+MINUS : '-' ;
+TIMES : '*' ;
+DIV : '/' ;
+COMMA : ',' ;
+POINT : '.' ;
+POW : '^' ;
 
 VARIABLE
-   : VALID_ID_START VALID_ID_CHAR*
-   ;
-
-fragment VALID_ID_START
-   : ('a' .. 'z') | ('A' .. 'Z') | '_'
-   ;
-
-fragment VALID_ID_CHAR
-   : VALID_ID_START | ('0' .. '9')
+   : ('a' .. 'z') | ('A' .. 'Z')
    ;
 
 FLOAT
