@@ -153,4 +153,5 @@ public class PolynomialSum {
                 .map(pl -> performer.apply(pl, p))
                 .collect(Collectors.toSet());
     }
+
 }
