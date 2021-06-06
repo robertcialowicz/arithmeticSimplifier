@@ -37,7 +37,7 @@ Powyższa instrukcja odpowiada za podzielenie linii wczytanej z pliku jako łań
 `val lexer = new calculatorLexer(stream);`
 
 
-#### Tokens
+#### Tokeny
 `val tokens = new CommonTokenStream(lexer);`
 
 
@@ -59,7 +59,7 @@ Visitor przechodzi po drzewie i zwraca wynik jako `PolynomialSum`.
 
 `ResultParser.polynomialSumToString(result)`
 
-Powyższa metoda z klasy ResultParser odpowiada za nadpisanie metody toString() na obiekcie typu `PolynomialSum`. W metodzie zawarta jest logika dodatkowa logika uwzględniająca poniższe przypadki:
+Powyższa metoda klasy `ResultParser` odpowiada za nadpisanie metody `toString()` na obiekcie typu `PolynomialSum`. <br> W tej metodzie zawarta jest również logika dodatkowa logika uwzględniająca poniższe przypadki:
 - x^1 -> x
 - x^0 -> 1
 - 0*x -> 0
