@@ -17,7 +17,7 @@ Program służy do upraszczania wyrażeń algebraicznych. Obsługuje operacje `+
 1. Uruchom projekt w IntelliJ
 2. Zainstaluj plugin Antlr4
 3. Uruchom mvn clean package
-4. Uruchom metodę main() klasy main
+4. Uruchom metodę `main()` klasy `Main`
 
 ## Architektura i implementacja
 
