@@ -19,6 +19,7 @@ public class ResultParser {
             if (polynomial.getCoefficient() == 0 ) continue;
             if (polynomial.getCoefficient() != 1 ) output.append(polynomial.getCoefficient());
                                                          //.append("*");
+            if (polynomial.getCoefficient() == 1 && polynomial.getIntermediates().size() == 0) output.append("1");
 
             for (Intermediate intermediate : polynomial.getIntermediates()){
                 if (intermediate.getExponent() == 0) {

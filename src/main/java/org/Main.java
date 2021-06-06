@@ -27,6 +27,7 @@ public class Main {
 
             System.out.println("==================================");
             System.out.println(polynomial);
+            System.out.println(result);
             System.out.println(ResultParser.polynomialSumToString(result));
             InputParser.saveLineToFile( InputParser.buildResultPath(inputFilePath),
                                     polynomial + "   ->   " +ResultParser.polynomialSumToString(result));
