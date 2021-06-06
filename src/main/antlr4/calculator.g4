@@ -1,35 +1,31 @@
 grammar calculator;
 
 expression
-   : multiplyingExpression ((PLUS | MINUS) multiplyingExpression)*
+   : multiplyingExpression PLUS expression # Plus
+   | multiplyingExpression MINUS expression # Minus
+   | multiplyingExpression # toMultiplyingExpression
    ;
 
 multiplyingExpression
-   : powExpression ((TIMES | DIV) powExpression)*
+   : powExpression TIMES multiplyingExpression # Times
+   | powExpression DIV multiplyingExpression # Div
+   | powExpression # toPowExpression
    ;
 
 powExpression
-   : signedAtom (POW signedAtom)*
+   : signedAtom POW signedAtom # Pow
+   | signedAtom # toSignedAtom
    ;
 
 signedAtom
-   : PLUS signedAtom
-   | MINUS signedAtom
-   | atom
+   : atom # PositiveAtom
+   | MINUS atom # NegativeAtom
    ;
 
 atom
-   : number
-   | variable
-   | LPAREN expression RPAREN
-   ;
-
-number
-   : FLOAT
-   ;
-
-variable
-   : VARIABLE
+   : FLOAT # Number
+   | VARIABLE # Variable
+   | LPAREN expression RPAREN # Parens
    ;
 
 LPAREN : '(' ;
