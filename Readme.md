@@ -3,7 +3,7 @@
 ## Projekt
 Program do upraszczania wyrażeń algebraicznych
 
-## Authors
+## Autorzy
 
 Ciałowicz Robert <robcial@student.agh.edu.pl>
 
