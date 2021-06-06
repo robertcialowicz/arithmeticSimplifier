@@ -9,22 +9,32 @@ Ciałowicz Robert <robcial@student.agh.edu.pl>
 
 Szpila Magdalena <mszpila@student.agh.edu.pl>
 
-## Architektura
-
-
-
+## Opis
+Program służy do upraszczania wyrażeń algebraicznych. Obsługuje operacje `+, -, *, /, (, )` oraz dowolną symboliczną nazwę zmiennej. Domyślnym zachowaniem programu jest pobieranie wyrażeń z pliku wsadowego `/example/example.txt` linia po linii oraz zwracanie wyników do `example/example_result.txt`. Lokalizację pliku wsadowego można zmienić poprzez zmianę marametru `inputFilePath` w klasie `main`.
 
 ## Uruchamianie
 
-- Pobieranie wartości z pliku zdefiniowanego w klasie Main
-- Pisanie wyników na konsolę i do pliku
+1. Uruchom projekt w IntelliJ
+2. Zainstaluj plugin Antlr4
+3. Uruchom mvn clean package
+4. Uruchom metodę main() klasy main
 
+## Architektura i implementacja
 
+### Wykorzystane technologie:
+- Java 8
+- Antrl4 i Antlr4 plugin
 
+### Etapy przetwarzania wyrażeń algebraicznych:
+#### tokenizacja
 
-1. Install ANTLR v4 ([manual](https://github.com/antlr/antlr4/blob/master/doc/getting-started.md#installation))
-1. Generate ANTLR files `antlr4 Calculator.g4 -no-listener -visitor -o app`
-1. Copy visitor implementation `cp *.java app`
-1. Compile `javac app/*.java`
+----------TO BE DONE (grammar.g4)
 
+#### ewaluacja wyrażenia
+
+----------TO BE DONE (listener -> Polynomial Sum)
+
+#### drukowanie wyniku
+
+----------TO BE DONE (Polynomial Sum -> console output)
 
