@@ -26,10 +26,10 @@ public class Main {
             val result = new CalculatorVisitorImpl().visit(tree);
 
             System.out.println("==================================");
-            System.out.println(tokens.getTokens());
+            System.out.println(polynomial);
             System.out.println(ResultParser.polynomialSumToString(result));
             InputParser.saveLineToFile( InputParser.buildResultPath(inputFilePath),
-                                    polynomial + "   ->   " +ResultParser.polynomialSumToString(sum));
+                                    polynomial + "   ->   " +ResultParser.polynomialSumToString(result));
             System.out.println("==================================");
 
         }
