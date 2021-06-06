@@ -300,6 +300,7 @@ public class PolynomialSumTest {
                                              new Polynomial(1,
                                                             Set.of(new Intermediate('b'), new Intermediate('a', -1))),
                                              new Polynomial(2));
+
             assertAll(
                     () -> assertThat(extractCoefficients(actual)).hasSameElementsAs(extractCoefficients(expected)),
                     () -> assertThat(actual).isEqualTo(expected)
